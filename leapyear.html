@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>năm nhuận</title>
+</head>
+<body>
+<h1>Mời nhập vào năm bạn muốn kiểm tra</h1>
+<br>
+<input type="text" id="nam">
+<br>
+<br>
+
+<button onclick="kiemtranamnhuan()">Kiểm tra</button>
+<br>
+<p id="result"></p>
+<script>
+    function kiemtranamnhuan() {
+        let year = document.getElementById('nam').value;
+        let x = parseInt(year);
+        if (x % 4 === 0) {
+            if (x % 100 == 0) {
+                if (x%400 == 0) {
+                    document.getElementById('result').innerHTML = 'Năm bạn kiểm tra là năm nhuận'
+                } else {
+                    document.getElementById('result').innerHTML = 'Năm bạn kiểm tra là ko phải năm nhuận'
+                }
+            } else  {
+                document.getElementById('result').innerHTML = 'Năm bạn kiểm tra là năm nhuận'
+            }
+        } else  {
+            document.getElementById('result').innerHTML = 'Năm bạn kiểm tra là  ko phải năm nhuận'
+        }
+    }
+
+</script>
+</body>
+</html>
