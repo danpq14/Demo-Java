@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng chuyển đổi tiền tệ</title>
+    <script src="tiente.js"></script>
+</head>
+<body>
+<form action="http://google.com.vn">
+    <p>Amount</p>
+    <br>
+    <input type="text" id="amount">
+    <br>
+    <p>From Currency</p>
+    <select name="Currency" id="fc">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option> <-- tỉ lệ là 23000 -->
+        <option value="GBP">GBP</option> <-- tỉ lệ là 30000 -->
+
+    </select>
+    <p>To Currency</p>
+    <select name="ToCurrency" id="tc">
+        <option value="USD">USD</option>
+        <option value="GBP">GBP</option>
+    </select>
+    <br>
+    <button type="button" onclick="tienTe()">Convert</button>
+    <script>
+        function tienTe() {
+            let sotien=document.getElementById("amount").value;
+            let so=parseInt(sotien);
+            let fromcurrentcy=document.getElementById("fc").value;
+            let tocurrentcy=document.getElementById("tc").value;
+            let p;
+
+            if (fromcurrentcy === "VND") {
+                if (tocurrentcy === "USD") {
+                    p=((so)/23000)
+
+                } else {
+                    p=((so)/30000)
+                }
+            } else {
+
+                if (fromcurrentcy === "USD") {
+                    if (tocurrentcy === "USD") {
+                        p = (so)
+                    } else {
+                        p = ((so) * 0.76)
+                    }
+                } else {
+                    if (tocurrentcy === "USD") {
+                        p = ((so) / 0.76)
+                    } else {
+                        p = (so)
+                    }
+                }
+            }
+            document.write("so tien cua ban sau khi chuyen doi la  :" +p)
+        }
+    </script>
+    <br>
+
+
+
+
+</form>
+
+</body>
+</html>
