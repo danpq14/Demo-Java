@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    </head>
+<body>
+<script>
+    let vatly;
+    let hoahoc;
+    let sinhhoc;
+    vatly = prompt('moi nhap diem vat ly');
+    hoahoc = prompt('moi nhap diem hoa hoc');
+    sinhhoc = prompt('moi nhap diem sinh hoc');
+    let diemvatly = parseInt(vatly)
+    let diemhoahoc = parseInt(hoahoc)
+    let diemsinhhoc = parseInt(sinhhoc)
+    let diemtrungbinh = (diemvatly + diemhoahoc + diemsinhhoc)/3
+    let tongdiem3mon = (diemvatly + diemhoahoc + diemsinhhoc)
+    document.write('diem trung binh 3 mon la :' + diemtrungbinh)
+    document.write('</br>')
+    document.write('tong diem 3 mon la :' + tongdiem3mon)
+
+
+</script>
+
+
+
+</body>
+</html>
