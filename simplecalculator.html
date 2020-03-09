@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+</head>
+<body>
+<h1>Calculator</h1>
+<br>
+<form action="/action_page.php">
+
+
+<input type="text" id="sothunhat"> <br> <br>
+<input type="text" id="sothuhai"> <br>
+<br>
+
+<button type="button" onclick="Add()">Adddition (+)</button>
+<button type="button" onclick="Sub()">Subtraction (-)</button>
+<button type="button" onclick="Multi()">Multiplication (x)</button>
+<button type="button" onclick="Div()">Division (:)</button>
+    <button type="button" onclick="reset()">Reset</button>
+<br>
+<br>
+
+<p id="result">Result : </p>
+
+</form>
+
+<script>
+
+
+
+    function Add() {
+        let sohang1 = document.getElementById("sothunhat").value;
+        console.log(sohang1);
+        let sohang2 = document.getElementById("sothuhai").value;
+        console.log(sohang2);
+        let a=parseInt(sohang1);
+        let b=parseInt(sohang2);
+        let c;
+        c= a+b;
+        document.getElementById("result").innerHTML += c ;
+    }
+    function Sub() {
+        let sohang1 = document.getElementById("sothunhat").value;
+        console.log(sohang1);
+        let sohang2 = document.getElementById("sothuhai").value;
+        console.log(sohang2);
+        let a=parseInt(sohang1);
+        let b=parseInt(sohang2);
+        let c;
+        c= (a-b) ;
+        document.getElementById("result").innerHTML += +c ;
+    }
+    function Multi() {
+        let sohang1 = document.getElementById("sothunhat").value;
+        console.log(sohang1);
+        let sohang2 = document.getElementById("sothuhai").value;
+        console.log(sohang2);
+        let a=parseInt(sohang1);
+        let b=parseInt(sohang2);
+        let c;
+        c= (a*b) ;
+        document.getElementById("result").innerHTML += +c ;
+    }
+    function Div() {
+        let sohang1 = document.getElementById("sothunhat").value;
+        console.log(sohang1);
+        let sohang2 = document.getElementById("sothuhai").value;
+        console.log(sohang2);
+        let a=parseInt(sohang1);
+        let b=parseInt(sohang2);
+        let c;
+        c= (a/b) ;
+        document.getElementById("result").innerHTML += +c ;
+    }
+    function reset() {
+        Document.getElementById("sothunhat").innerHTML="0"
+        Document.getElementById("sothunhat").innerHTML="0"
+        Document.getElementById("result").innerHTML= "0"
+
+    }
+
+
+</script>
+</body>
+</html>
